@@ -3,30 +3,16 @@
 // CONFIG — edit these values for your setup
 // ------------------------------------------------------------------
 
-// TMDb is used for search, posters, and runtime.
 // Get a free API key at https://www.themoviedb.org/settings/api
 define('TMDB_API_KEY', '4eb99111f556740d6ca86109c7f14ea7');
 
-// Watchmode is used for streaming availability (more current than TMDb's
-// watch-provider data, which is a slower-updating cache of JustWatch).
-// Get a free API key (2,500 requests/month, non-commercial) at:
-// https://api.watchmode.com/requestApiKey/
-define('WATCHMODE_API_KEY', 'LrrFTQBGiPzV918Wfuo21yAuqRU5UaDThRHuKhgh');
-
-// Region for Watchmode availability lookups. Watchmode's free tier lets
-// you choose up to 3 countries when you request your key — use one of
-// those here. Examples: US, GB, CA, AU
-define('WATCHMODE_REGION', 'US');
+// Country code for availability lookups (ISO 3166-1). Examples: US, GB, CA, AU
+define('TMDB_COUNTRY', 'US');
 
 // The ONLY streaming services you want checked against.
-// IMPORTANT: these must match Watchmode's exact provider names, which
-// sometimes differ from TMDb's (e.g. "Paramount+" not "Paramount Plus").
-// Matching is case-insensitive, but the exact wording still has to match.
-// Common examples: 'Netflix', 'Hulu', 'Max', 'Amazon Prime Video',
-// 'Disney+', 'Apple TV+', 'Paramount+', 'Peacock', 'Peacock Premium'
-// Not sure of the exact name? Add a movie you know is on the service,
-// then visit debug.php?id=<its TMDb id> to see the raw names Watchmode
-// returns for it.
+// Names must match TMDb's provider names. Common examples:
+// 'Netflix', 'Hulu', 'Max', 'Amazon Prime Video', 'Disney Plus',
+// 'Apple TV Plus', 'Paramount Plus', 'Peacock', 'Peacock Premium'
 $ALLOWED_SERVICES = [
     'Netflix',
     'Hulu',

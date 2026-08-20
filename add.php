@@ -28,14 +28,12 @@ foreach ($movies as $m) {
 }
 
 if (!$alreadyExists) {
-    $result = get_available_services($id);
     $movies[] = [
         'id' => $id,
         'title' => $title,
         'year' => $year,
         'poster_path' => $poster_path,
-        'available' => $result['available'],
-        'watchmode_id' => $result['watchmode_id'],
+        'available' => tmdb_get_available_services($id),
         'runtime' => tmdb_get_runtime($id),
         'last_checked' => date('Y-m-d H:i'),
         'order' => next_order_value(),
