@@ -35,7 +35,7 @@ $ALLOWED_SERVICES = [
     'Disney+',
     'Paramount',
     'Paramount Plus',
-	'Paramount+'
+	'Paramount+',
     'Paramount Plus Premium',
         'MGM Plus',
         'Apple TV+',
