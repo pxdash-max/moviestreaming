@@ -1,0 +1,625 @@
+[
+    {
+        "id": 46838,
+        "title": "Tucker and Dale vs. Evil",
+        "year": "2010",
+        "poster_path": "/8shwLEDzajJGSfLgbpac8x8xn1U.jpg",
+        "available": [],
+        "runtime": 89,
+        "last_checked": "2026-08-19 20:06",
+        "order": 0
+    },
+    {
+        "id": 551804,
+        "title": "Freaky",
+        "year": "2020",
+        "poster_path": "/8xC6QSyxrpm0D5A6iyHNemEWBVe.jpg",
+        "available": [
+            "Peacock Premium"
+        ],
+        "runtime": 102,
+        "last_checked": "2026-08-19 20:07",
+        "order": 1
+    },
+    {
+        "id": 829400,
+        "title": "Psych 3: This Is Gus",
+        "year": "2021",
+        "poster_path": "/9tJRcfdQKmq8krlxeJcQB33lvKA.jpg",
+        "available": [
+            "Peacock Premium"
+        ],
+        "runtime": 96,
+        "last_checked": "2026-08-19 20:07",
+        "order": 2
+    },
+    {
+        "id": 419430,
+        "title": "Get Out",
+        "year": "2017",
+        "poster_path": "/tFXcEccSQMf3lfhfXKSU9iRBpa3.jpg",
+        "available": [],
+        "runtime": 104,
+        "last_checked": "2026-08-19 20:07",
+        "order": 3
+    },
+    {
+        "id": 194662,
+        "title": "Birdman or (The Unexpected Virtue of Ignorance)",
+        "year": "2014",
+        "poster_path": "/rHUg2AuIuLSIYMYFgavVwqt1jtc.jpg",
+        "available": [],
+        "runtime": 120,
+        "last_checked": "2026-08-19 20:07",
+        "order": 4
+    },
+    {
+        "id": 546554,
+        "title": "Knives Out",
+        "year": "2019",
+        "poster_path": "/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
+        "available": [],
+        "runtime": 131,
+        "last_checked": "2026-08-19 20:07",
+        "order": 5
+    },
+    {
+        "id": 569094,
+        "title": "Spider-Man: Across the Spider-Verse",
+        "year": "2023",
+        "poster_path": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+        "available": [
+            "HBO Max",
+            "Disney Plus"
+        ],
+        "runtime": 140,
+        "last_checked": "2026-08-19 20:07",
+        "order": 6
+    },
+    {
+        "id": 1226863,
+        "title": "The Super Mario Galaxy Movie",
+        "year": "2026",
+        "poster_path": "/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
+        "available": [
+            "Peacock Premium"
+        ],
+        "runtime": 98,
+        "last_checked": "2026-08-19 20:07",
+        "order": 7
+    },
+    {
+        "id": 149,
+        "title": "Akira",
+        "year": "1988",
+        "poster_path": "/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg",
+        "available": [],
+        "runtime": 124,
+        "last_checked": "2026-08-19 20:07",
+        "order": 8
+    },
+    {
+        "id": 1078605,
+        "title": "Weapons",
+        "year": "2025",
+        "poster_path": "/cpf7vsRZ0MYRQcnLWteD5jK9ymT.jpg",
+        "available": [
+            "HBO Max",
+            "Amazon Prime Video"
+        ],
+        "runtime": 129,
+        "last_checked": "2026-08-19 20:07",
+        "order": 9
+    },
+    {
+        "id": 1007734,
+        "title": "Nobody 2",
+        "year": "2025",
+        "poster_path": "/svXVRoRSu6zzFtCzkRsjZS7Lqpd.jpg",
+        "available": [
+            "Netflix"
+        ],
+        "runtime": 89,
+        "last_checked": "2026-08-19 20:07",
+        "order": 10
+    },
+    {
+        "id": 1071585,
+        "title": "M3GAN 2.0",
+        "year": "2025",
+        "poster_path": "/fBgyUqyu3ioTSQjJJE5RFs2EG3B.jpg",
+        "available": [
+            "Netflix"
+        ],
+        "runtime": 120,
+        "last_checked": "2026-08-19 20:07",
+        "order": 11
+    },
+    {
+        "id": 828947,
+        "title": "Beavis and Butt-Head Do the Universe",
+        "year": "2022",
+        "poster_path": "/rVKMA2j8m8hWgsDyXOllXp8DsWI.jpg",
+        "available": [
+            "Paramount Plus Premium"
+        ],
+        "runtime": 86,
+        "last_checked": "2026-08-19 20:07",
+        "order": 12
+    },
+    {
+        "id": 383498,
+        "title": "Deadpool 2",
+        "year": "2018",
+        "poster_path": "/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg",
+        "available": [
+            "HBO Max",
+            "Disney Plus"
+        ],
+        "runtime": 120,
+        "last_checked": "2026-08-19 20:07",
+        "order": 13
+    },
+    {
+        "id": 533535,
+        "title": "Deadpool & Wolverine",
+        "year": "2024",
+        "poster_path": "/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+        "available": [
+            "Disney Plus"
+        ],
+        "runtime": 128,
+        "last_checked": "2026-08-19 20:07",
+        "order": 14
+    },
+    {
+        "id": 129,
+        "title": "Spirited Away",
+        "year": "2001",
+        "poster_path": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+        "available": [
+            "HBO Max"
+        ],
+        "runtime": 125,
+        "last_checked": "2026-08-19 20:07",
+        "order": 15
+    },
+    {
+        "id": 11688,
+        "title": "The Emperor's New Groove",
+        "year": "2000",
+        "poster_path": "/wwbgkXQBEKtnyIJapk6gUgWkVw8.jpg",
+        "available": [
+            "Disney Plus"
+        ],
+        "runtime": 78,
+        "last_checked": "2026-08-19 20:07",
+        "order": 16
+    },
+    {
+        "id": 501929,
+        "title": "The Mitchells vs. the Machines",
+        "year": "2021",
+        "poster_path": "/mI2Di7HmskQQ34kz0iau6J1vr70.jpg",
+        "available": [
+            "Netflix"
+        ],
+        "runtime": 110,
+        "last_checked": "2026-08-19 20:07",
+        "order": 17
+    },
+    {
+        "id": 4935,
+        "title": "Howl's Moving Castle",
+        "year": "2004",
+        "poster_path": "/13kOl2v0nD2OLbVSHnHk8GUFEhO.jpg",
+        "available": [
+            "HBO Max"
+        ],
+        "runtime": 119,
+        "last_checked": "2026-08-19 20:07",
+        "order": 19
+    },
+    {
+        "id": 493922,
+        "title": "Hereditary",
+        "year": "2018",
+        "poster_path": "/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
+        "available": [
+            "HBO Max"
+        ],
+        "runtime": 128,
+        "last_checked": "2026-08-19 20:07",
+        "order": 20
+    },
+    {
+        "id": 4944,
+        "title": "Burn After Reading",
+        "year": "2008",
+        "poster_path": "/jdwSkQu3XirmX18MNj8CqFWsCk.jpg",
+        "available": [
+            "Netflix",
+            "YouTube Free"
+        ],
+        "runtime": 96,
+        "last_checked": "2026-08-19 20:07",
+        "order": 21
+    },
+    {
+        "id": 242224,
+        "title": "The Babadook",
+        "year": "2014",
+        "poster_path": "/qt3fqapeo94TfvMyld8P7gkpXLz.jpg",
+        "available": [
+            "Hulu"
+        ],
+        "runtime": 94,
+        "last_checked": "2026-08-19 20:07",
+        "order": 22
+    },
+    {
+        "id": 8467,
+        "title": "Dumb and Dumber",
+        "year": "1994",
+        "poster_path": "/4LdpBXiCyGKkR8FGHgjKlphrfUc.jpg",
+        "available": [],
+        "runtime": 107,
+        "last_checked": "2026-08-19 20:07",
+        "order": 23
+    },
+    {
+        "id": 138843,
+        "title": "The Conjuring",
+        "year": "2013",
+        "poster_path": "/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+        "available": [
+            "HBO Max"
+        ],
+        "runtime": 112,
+        "last_checked": "2026-08-19 20:07",
+        "order": 24
+    },
+    {
+        "id": 36819,
+        "title": "Time Bandits",
+        "year": "1981",
+        "poster_path": "/4VZtpwdhHQSa4LUkvujyGAHb1hG.jpg",
+        "available": [
+            "HBO Max"
+        ],
+        "runtime": 116,
+        "last_checked": "2026-08-19 20:07",
+        "order": 25
+    },
+    {
+        "id": 6978,
+        "title": "Big Trouble in Little China",
+        "year": "1986",
+        "poster_path": "/gI2Qs1yTTj3NcESJyttCkbmJ4k9.jpg",
+        "available": [],
+        "runtime": 100,
+        "last_checked": "2026-08-19 20:07",
+        "order": 26
+    },
+    {
+        "id": 64688,
+        "title": "21 Jump Street",
+        "year": "2012",
+        "poster_path": "/8v3Sqv9UcIUC4ebmpKWROqPBINZ.jpg",
+        "available": [],
+        "runtime": 109,
+        "last_checked": "2026-08-19 20:07",
+        "order": 27
+    },
+    {
+        "id": 150540,
+        "title": "Inside Out",
+        "year": "2015",
+        "poster_path": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
+        "available": [
+            "Disney Plus"
+        ],
+        "runtime": 95,
+        "last_checked": "2026-08-19 20:07",
+        "order": 28
+    },
+    {
+        "id": 82507,
+        "title": "Sinister",
+        "year": "2012",
+        "poster_path": "/nzx10sca3arCeYBAomHan4Q6wa1.jpg",
+        "available": [],
+        "runtime": 110,
+        "last_checked": "2026-08-19 20:07",
+        "order": 29
+    },
+    {
+        "id": 310131,
+        "title": "The Witch",
+        "year": "2016",
+        "poster_path": "/zap5hpFCWSvdWSuPGAQyjUv2wAC.jpg",
+        "available": [
+            "Netflix"
+        ],
+        "runtime": 92,
+        "last_checked": "2026-08-19 20:07",
+        "order": 30
+    },
+    {
+        "id": 10823,
+        "title": "Children of the Corn",
+        "year": "1984",
+        "poster_path": "/jJTrFHu3rjAgP1lryKGEsC9hqyM.jpg",
+        "available": [
+            "Amazon Prime Video",
+            "YouTube Free"
+        ],
+        "runtime": 92,
+        "last_checked": "2026-08-19 20:07",
+        "order": 31
+    },
+    {
+        "id": 9339,
+        "title": "Click",
+        "year": "2006",
+        "poster_path": "/oL0k5JA53PyoHSZqKb3cNkhwBCE.jpg",
+        "available": [],
+        "runtime": 107,
+        "last_checked": "2026-08-19 20:07",
+        "order": 32
+    },
+    {
+        "id": 1233413,
+        "title": "Sinners",
+        "year": "2025",
+        "poster_path": "/fWPgbnt2LSqkQ6cdQc0SZN9CpLm.jpg",
+        "available": [
+            "HBO Max"
+        ],
+        "runtime": 138,
+        "last_checked": "2026-08-19 20:07",
+        "order": 33
+    },
+    {
+        "id": 1124,
+        "title": "The Prestige",
+        "year": "2006",
+        "poster_path": "/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
+        "available": [],
+        "runtime": 130,
+        "last_checked": "2026-08-19 20:07",
+        "order": 34
+    },
+    {
+        "id": 245891,
+        "title": "John Wick",
+        "year": "2014",
+        "poster_path": "/wXqWR7dHncNRbxoEGybEy7QTe9h.jpg",
+        "available": [],
+        "runtime": 101,
+        "last_checked": "2026-08-19 20:07",
+        "order": 35
+    },
+    {
+        "id": 2291,
+        "title": "Jacob's Ladder",
+        "year": "1990",
+        "poster_path": "/ufLcHIi1aXjjH8MediAMvnwDsVI.jpg",
+        "available": [
+            "MGM Plus",
+            "YouTube Free"
+        ],
+        "runtime": 113,
+        "last_checked": "2026-08-19 20:07",
+        "order": 36
+    },
+    {
+        "id": 1824,
+        "title": "50 First Dates",
+        "year": "2004",
+        "poster_path": "/lzUI2Cg7OMfcUNv3f7MywYNBjs6.jpg",
+        "available": [],
+        "runtime": 99,
+        "last_checked": "2026-08-19 20:07",
+        "order": 37
+    },
+    {
+        "id": 76492,
+        "title": "Hotel Transylvania",
+        "year": "2012",
+        "poster_path": "/eJGvzGrsfe2sqTUPv5IwLWXjVuR.jpg",
+        "available": [],
+        "runtime": 91,
+        "last_checked": "2026-08-19 20:07",
+        "order": 38
+    },
+    {
+        "id": 13260,
+        "title": "Semi-Pro",
+        "year": "2008",
+        "poster_path": "/7KJrvJf96UpkXsWVOjzCo1IbnW6.jpg",
+        "available": [],
+        "runtime": 91,
+        "last_checked": "2026-08-19 20:07",
+        "order": 39
+    },
+    {
+        "id": 5,
+        "title": "Four Rooms",
+        "year": "1995",
+        "poster_path": "/75aHn1NOYXh4M7L5shoeQ6NGykP.jpg",
+        "available": [],
+        "runtime": 98,
+        "last_checked": "2026-08-19 20:07",
+        "order": 40
+    },
+    {
+        "id": 16871,
+        "title": "Drag Me to Hell",
+        "year": "2009",
+        "poster_path": "/fdyejM5Zd6dsa0YyWa02ZAKwQzK.jpg",
+        "available": [
+            "YouTube Free"
+        ],
+        "runtime": 99,
+        "last_checked": "2026-08-19 20:07",
+        "order": 41
+    },
+    {
+        "id": 16869,
+        "title": "Inglourious Basterds",
+        "year": "2009",
+        "poster_path": "/aupnPtagH9JVBuMrGEanf4iqXEQ.jpg",
+        "available": [],
+        "runtime": 153,
+        "last_checked": "2026-08-19 20:07",
+        "order": 42
+    },
+    {
+        "id": 9718,
+        "title": "Talladega Nights: The Ballad of Ricky Bobby",
+        "year": "2006",
+        "poster_path": "/3iCiTqsmJz1mO85AHzTiHNkRmb6.jpg",
+        "available": [
+            "MGM Plus"
+        ],
+        "runtime": 108,
+        "last_checked": "2026-08-19 20:07",
+        "order": 43
+    },
+    {
+        "id": 27225,
+        "title": "S.O.B.",
+        "year": "1981",
+        "poster_path": "/6irq1xZdQ8rC4AuxPDlA9NkPyYs.jpg",
+        "available": [],
+        "runtime": 121,
+        "last_checked": "2026-08-19 20:07",
+        "order": 44
+    },
+    {
+        "id": 9392,
+        "title": "The Descent",
+        "year": "2005",
+        "poster_path": "/mxFPI4KYBk5ri9cPteIS8jiDFgj.jpg",
+        "available": [],
+        "runtime": 100,
+        "last_checked": "2026-08-19 20:07",
+        "order": 45
+    },
+    {
+        "id": 1314481,
+        "title": "The Devil Wears Prada 2",
+        "year": "2026",
+        "poster_path": "/xTI42pmsP5EDnvsNJPEDubwWBQO.jpg",
+        "available": [
+            "Hulu",
+            "Disney Plus"
+        ],
+        "runtime": 119,
+        "last_checked": "2026-08-19 20:07",
+        "order": 46
+    },
+    {
+        "id": 950,
+        "title": "Ice Age: The Meltdown",
+        "year": "2006",
+        "poster_path": "/zDduhCHasKQ9YOTvlOreHem7Wbi.jpg",
+        "available": [
+            "Disney Plus"
+        ],
+        "runtime": 91,
+        "last_checked": "2026-08-19 20:07",
+        "order": 47
+    },
+    {
+        "id": 38055,
+        "title": "Megamind",
+        "year": "2010",
+        "poster_path": "/uZ9ytt3sPTx62XTfN56ILSuYWRe.jpg",
+        "available": [
+            "Peacock Premium"
+        ],
+        "runtime": 96,
+        "last_checked": "2026-08-19 20:07",
+        "order": 48
+    },
+    {
+        "id": 9806,
+        "title": "The Incredibles",
+        "year": "2004",
+        "poster_path": "/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg",
+        "available": [
+            "Disney Plus"
+        ],
+        "runtime": 115,
+        "last_checked": "2026-08-19 20:07",
+        "order": 49
+    },
+    {
+        "id": 260513,
+        "title": "Incredibles 2",
+        "year": "2018",
+        "poster_path": "/9lFKBtaVIhP7E2Pk0IY1CwTKTMZ.jpg",
+        "available": [
+            "Disney Plus"
+        ],
+        "runtime": 118,
+        "last_checked": "2026-08-19 20:07",
+        "order": 50
+    },
+    {
+        "id": 170,
+        "title": "28 Days Later",
+        "year": "2002",
+        "poster_path": "/sQckQRt17VaWbo39GIu0TMOiszq.jpg",
+        "available": [],
+        "runtime": 113,
+        "last_checked": "2026-08-19 20:07",
+        "order": 51
+    },
+    {
+        "id": 1573,
+        "title": "Die Hard 2",
+        "year": "1990",
+        "poster_path": "/ybki0UWO3OPhaM6MSniuKC7sy1R.jpg",
+        "available": [],
+        "runtime": 124,
+        "last_checked": "2026-08-19 20:07",
+        "order": 52
+    },
+    {
+        "id": 1572,
+        "title": "Die Hard: With a Vengeance",
+        "year": "1995",
+        "poster_path": "/buqmCdFQEWwEpL3agGgg2GVjN2d.jpg",
+        "available": [],
+        "runtime": 128,
+        "last_checked": "2026-08-19 20:07",
+        "order": 53
+    },
+    {
+        "id": 1562,
+        "title": "28 Weeks Later",
+        "year": "2007",
+        "poster_path": "/oix0aNv1lvW3nUGspUyvSIBlpbs.jpg",
+        "available": [
+            "Amazon Prime Video"
+        ],
+        "runtime": 99,
+        "last_checked": "2026-08-19 20:07",
+        "order": 54
+    },
+    {
+        "id": 1100988,
+        "title": "28 Years Later",
+        "year": "2025",
+        "poster_path": "/n5FygjEppOvac6yEaowi26nTyw3.jpg",
+        "available": [
+            "Netflix"
+        ],
+        "runtime": 115,
+        "last_checked": "2026-08-19 20:07",
+        "order": 55
+    }
+]
