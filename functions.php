@@ -48,135 +48,29 @@ function tmdb_search_movie($title) {
 }
 
 /**
- * Make a GET request to the Watchmode API and return decoded JSON.
+ * Fetch watch providers for a given TMDb movie id, filtered against
+ * the allowed services list. Returns an array of matched service names
+ * (empty array means "none").
  */
-function watchmode_request($endpoint, $params = []) {
-    $params['apiKey'] = WATCHMODE_API_KEY;
-    $url = "https://api.watchmode.com/v1{$endpoint}?" . http_build_query($params);
+function tmdb_get_available_services($movieId) {
+    global $ALLOWED_SERVICES;
 
-    $context = stream_context_create([
-        'http' => [
-            'timeout' => 10,
-            'ignore_errors' => true,
-        ],
-    ]);
-
-    $response = @file_get_contents($url, false, $context);
-    if ($response === false) {
-        return null;
-    }
-
-    return json_decode($response, true);
-}
-
-/**
- * Search Watchmode by TMDb movie id and return the raw list of matches
- * (id, name, year, type) — unfiltered, for verifying we matched the
- * right title.
- */
-function watchmode_search_by_tmdb($tmdbId) {
-    $data = watchmode_request('/search/', [
-        'search_field' => 'tmdb_movie_id',
-        'search_value' => $tmdbId,
-    ]);
-
-    if (!$data || empty($data['title_results'])) {
+    $data = tmdb_request("/movie/{$movieId}/watch/providers");
+    if (!$data || empty($data['results'][TMDB_COUNTRY])) {
         return [];
     }
 
-    return $data['title_results'];
-}
-
-/**
- * Look up a title's Watchmode ID using its TMDb movie ID.
- * Prefers a result explicitly typed 'movie' if the field is present.
- * Returns null if no match is found.
- */
-function watchmode_find_id_by_tmdb($tmdbId) {
-    $results = watchmode_search_by_tmdb($tmdbId);
-    if (empty($results)) {
-        return null;
-    }
-
-    foreach ($results as $r) {
-        if (($r['type'] ?? 'movie') === 'movie') {
-            return $r['id'] ?? null;
+    $countryData = $data['results'][TMDB_COUNTRY];
+    $found = [];
+    foreach (['flatrate', 'ads', 'free'] as $type) {
+        foreach ($countryData[$type] ?? [] as $provider) {
+            $found[] = $provider['provider_name'];
         }
     }
 
-    return $results[0]['id'] ?? null;
-}
-
-/**
- * Fetch the COMPLETE, unfiltered list of sources Watchmode returns for a
- * title id — every type (sub, free, rent, buy, tve) and whatever regions
- * come back. This is the raw API response, untouched. Use this for
- * debugging; use watchmode_get_raw_sources() for the actual app logic.
- */
-function watchmode_get_all_sources($watchmodeId) {
-    $data = watchmode_request("/title/{$watchmodeId}/sources/", [
-        'regions' => WATCHMODE_REGION,
-    ]);
-
-    return is_array($data) ? $data : [];
-}
-
-/**
- * Case-insensitive match of found service names against the allowed list.
- * Returns matches using the casing from $ALLOWED_SERVICES (so your config
- * controls how names are displayed).
- */
-function match_allowed_services($foundNames, $allowedNames) {
-    $normalizedAllowed = [];
-    foreach ($allowedNames as $a) {
-        $normalizedAllowed[strtolower(trim($a))] = $a;
-    }
-
-    $matches = [];
-    foreach ($foundNames as $f) {
-        $key = strtolower(trim($f));
-        if (isset($normalizedAllowed[$key])) {
-            $matches[] = $normalizedAllowed[$key];
-        }
-    }
-    return array_values(array_unique($matches));
-}
-
-/**
- * Fetch a title's list of subscription/free source names from Watchmode,
- * filtered down to just those two types (excludes rent/buy/tve).
- */
-function watchmode_get_raw_sources($watchmodeId) {
-    $all = watchmode_get_all_sources($watchmodeId);
-
-    $names = [];
-    foreach ($all as $source) {
-        // "sub" = subscription (flatrate), "free" = ad-supported/free.
-        // Excludes "rent" and "buy" — the goal is "on something I already pay for".
-        if (in_array($source['type'] ?? '', ['sub', 'free'], true)) {
-            $names[] = $source['name'];
-        }
-    }
-    return array_values(array_unique($names));
-}
-
-/**
- * Given a TMDb movie id and an optional cached Watchmode id, fetch
- * current availability filtered against the allowed services list.
- * Returns ['watchmode_id' => ..., 'available' => [...]].
- */
-function get_available_services($tmdbId, $cachedWatchmodeId = null) {
-    global $ALLOWED_SERVICES;
-
-    $watchmodeId = $cachedWatchmodeId ?: watchmode_find_id_by_tmdb($tmdbId);
-    if (!$watchmodeId) {
-        return ['watchmode_id' => null, 'available' => []];
-    }
-
-    $found = watchmode_get_raw_sources($watchmodeId);
-    $matches = match_allowed_services($found, $ALLOWED_SERVICES);
-
-    return ['watchmode_id' => $watchmodeId, 'available' => $matches];
+    // De-dupe, then keep only ones on the allowed list
+    $found = array_unique($found);
+    return array_values(array_intersect($ALLOWED_SERVICES, $found));
 }
 
 /**
@@ -281,9 +175,7 @@ function refresh_movie($movieId) {
     $movies = load_movies();
     foreach ($movies as &$movie) {
         if ($movie['id'] == $movieId) {
-            $result = get_available_services($movieId, $movie['watchmode_id'] ?? null);
-            $movie['available'] = $result['available'];
-            $movie['watchmode_id'] = $result['watchmode_id'];
+            $movie['available'] = tmdb_get_available_services($movieId);
             if (empty($movie['runtime'])) {
                 $movie['runtime'] = tmdb_get_runtime($movieId);
             }
