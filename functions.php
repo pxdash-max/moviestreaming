@@ -70,20 +70,55 @@ function watchmode_request($endpoint, $params = []) {
 }
 
 /**
- * Look up a title's Watchmode ID using its TMDb movie ID.
- * Returns null if no match is found.
+ * Search Watchmode by TMDb movie id and return the raw list of matches
+ * (id, name, year, type) — unfiltered, for verifying we matched the
+ * right title.
  */
-function watchmode_find_id_by_tmdb($tmdbId) {
+function watchmode_search_by_tmdb($tmdbId) {
     $data = watchmode_request('/search/', [
         'search_field' => 'tmdb_movie_id',
         'search_value' => $tmdbId,
     ]);
 
     if (!$data || empty($data['title_results'])) {
+        return [];
+    }
+
+    return $data['title_results'];
+}
+
+/**
+ * Look up a title's Watchmode ID using its TMDb movie ID.
+ * Prefers a result explicitly typed 'movie' if the field is present.
+ * Returns null if no match is found.
+ */
+function watchmode_find_id_by_tmdb($tmdbId) {
+    $results = watchmode_search_by_tmdb($tmdbId);
+    if (empty($results)) {
         return null;
     }
 
-    return $data['title_results'][0]['id'] ?? null;
+    foreach ($results as $r) {
+        if (($r['type'] ?? 'movie') === 'movie') {
+            return $r['id'] ?? null;
+        }
+    }
+
+    return $results[0]['id'] ?? null;
+}
+
+/**
+ * Fetch the COMPLETE, unfiltered list of sources Watchmode returns for a
+ * title id — every type (sub, free, rent, buy, tve) and whatever regions
+ * come back. This is the raw API response, untouched. Use this for
+ * debugging; use watchmode_get_raw_sources() for the actual app logic.
+ */
+function watchmode_get_all_sources($watchmodeId) {
+    $data = watchmode_request("/title/{$watchmodeId}/sources/", [
+        'regions' => WATCHMODE_REGION,
+    ]);
+
+    return is_array($data) ? $data : [];
 }
 
 /**
@@ -108,20 +143,14 @@ function match_allowed_services($foundNames, $allowedNames) {
 }
 
 /**
- * Fetch a title's raw list of subscription/free source names from
- * Watchmode (unfiltered — useful for debugging exact provider names).
+ * Fetch a title's list of subscription/free source names from Watchmode,
+ * filtered down to just those two types (excludes rent/buy/tve).
  */
 function watchmode_get_raw_sources($watchmodeId) {
-    $data = watchmode_request("/title/{$watchmodeId}/sources/", [
-        'regions' => WATCHMODE_REGION,
-    ]);
-
-    if (!$data || !is_array($data)) {
-        return [];
-    }
+    $all = watchmode_get_all_sources($watchmodeId);
 
     $names = [];
-    foreach ($data as $source) {
+    foreach ($all as $source) {
         // "sub" = subscription (flatrate), "free" = ad-supported/free.
         // Excludes "rent" and "buy" — the goal is "on something I already pay for".
         if (in_array($source['type'] ?? '', ['sub', 'free'], true)) {

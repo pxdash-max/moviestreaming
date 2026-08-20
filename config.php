@@ -31,7 +31,7 @@ $ALLOWED_SERVICES = [
     'Netflix',
     'Hulu',
     'HBO Max',
-    'Amazon Prime Video',
+    'Amazon Prime',
     'Disney+',
     'Paramount',
     'Paramount Plus',
