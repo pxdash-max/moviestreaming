@@ -5,7 +5,7 @@
 
 // TMDb is used for search, posters, and runtime.
 // Get a free API key at https://www.themoviedb.org/settings/api
-define('TMDB_API_KEY', 'YOUR_TMDB_API_KEY_HERE');
+define('TMDB_API_KEY', '4eb99111f556740d6ca86109c7f14ea7');
 
 // Watchmode is used for streaming availability (more current than TMDb's
 // watch-provider data, which is a slower-updating cache of JustWatch).
