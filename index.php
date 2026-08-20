@@ -13,7 +13,7 @@ $movies = load_movies(); // already sorted by manual drag-and-drop order
 <body>
 <div class="container">
     <h1>🎬 My Movie Tracker</h1>
-    <p class="subtitle">Tracking against: <?= htmlspecialchars(implode(', ', $ALLOWED_SERVICES)) ?> (<?= htmlspecialchars(TMDB_COUNTRY) ?>)</p>
+    <p class="subtitle">Tracking against: <?= htmlspecialchars(implode(', ', $ALLOWED_SERVICES)) ?> (<?= htmlspecialchars(WATCHMODE_REGION) ?>)</p>
 
     <form method="get" action="search.php" class="add-form">
         <input type="text" name="q" placeholder="Search for a movie to add..." required>
